@@ -183,7 +183,7 @@ try{
         int birthMonth = Integer.parseInt((String) fmonths.getSelectedItem());
         int birthYear = Integer.parseInt(year_1.getText());
 
-        Calendar birthCalendar = new GregorianCalendar(birthYear, birthMonth - 1, birthDay);
+        Calendar birthCalendar = new GregorianCalendar(birthYear, birthMonth-1 , birthDay);
         Calendar currentCalendar = Calendar.getInstance();
 
         int age = currentCalendar.get(Calendar.YEAR) - birthCalendar.get(Calendar.YEAR);
@@ -214,7 +214,7 @@ try{
              try{
                             if(year_1.getText().equals("") )
                                 throw new InputException("Missing inputs");
-                                String s3 = "Your Brithday is "+fdays.getSelectedIndex()+"/"+ fmonths.getSelectedIndex()+
+                                String s3 = "Your Brithday is "+fdays.getSelectedItem()+"/"+ fmonths.getSelectedItem()+
                                       "/"+year_1.getText()+"\n"+result.getText();
                                 BufferedWriter This = new BufferedWriter(new FileWriter("History.txt",true));
                                 This.write(s3+"\n\n");
@@ -233,3 +233,4 @@ try{
     }
 
     }
+
