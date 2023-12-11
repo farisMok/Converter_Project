@@ -160,27 +160,31 @@ public class Mass extends JFrame {
                     num1 = Double.parseDouble(text1.getText());
                     String s1 = String.valueOf(list1.getSelectedItem());
                     String s2 = String.valueOf(list2.getSelectedItem());
+                    
+                    if(num1 < 0) {
+                    JOptionPane.showMessageDialog(null,  "Negative Input! ", "Error", JOptionPane.ERROR_MESSAGE);
+                    } else 
                     if (s1.equals("Tonne | T")) {
                         switch(s2) {
                             case "Tonne | T":
                                 result = num1;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Kilogram | Kg":
                                 result = num1 * 1000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Gram | G":
                                 result = num1 * 1000000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Pound | Lb":
                                 result = num1 * 2205;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Ounce | Oz":
                                 result = num1 * 35270;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                         }
                     }
@@ -189,23 +193,23 @@ public class Mass extends JFrame {
                         switch (s2){
                             case "Tonne | T":
                                 result = num1 / 1000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Kilogram | Kg":
                                 result = num1;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Gram | G":
                                 result = num1 * 1000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Pound | Lb":
                                 result = num1 * 2.205;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Ounce | Oz":
                                 result = num1 * 35.274;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break; 
                         }
                     }
@@ -214,23 +218,23 @@ public class Mass extends JFrame {
                         switch(s2) {
                             case "Tonne | T":
                                 result = num1 / 1000000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Kilogram | Kg":
                                 result = num1 / 1000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Gram | G":
                                 result = num1;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Pound | Lb":
                                 result = num1 / 453.6;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Ounce | Oz":
                                 result = num1 / 28.35;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break; 
                         }
                     }
@@ -239,23 +243,23 @@ public class Mass extends JFrame {
                         switch(s2){
                             case "Tonne | T":
                                 result = num1 / 2205 ;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Kilogram | Kg":
                                 result = num1 / 2.205;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Gram | G":
                                 result = num1 * 453.6;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Pound | Lb":
                                 result = num1;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Ounce | Oz":
                                 result = num1 * 16;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break; 
                         }
                     }
@@ -264,23 +268,23 @@ public class Mass extends JFrame {
                         switch(s2) {
                             case "Tonne | T":
                                 result = num1 / 35270 ;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Kilogram | Kg":
                                 result = num1 / 35.274;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Gram | G":
                                 result = num1 * 28.35;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Pound | Lb":
                                 result = num1 / 16;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Ounce | Oz":
                                 result = num1;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break; 
                         }
                     }

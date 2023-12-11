@@ -160,31 +160,35 @@ public class Data extends JFrame {
                     num1 = Double.parseDouble(text1.getText());
                     String s1 = String.valueOf(list1.getSelectedItem());
                     String s2 = String.valueOf(list2.getSelectedItem());
+                    
+                    if(num1 < 0) {
+                    JOptionPane.showMessageDialog(null,  "Negative Input! ", "Error", JOptionPane.ERROR_MESSAGE);
+                    } else 
                     if (s1.equals("Terabyte | TB")) {
                         switch(s2) {
                             case "Terabyte | TB":
                                 result = num1;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Gigabyte | GB":
                                 result = num1 * 1000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Megabyte | MB":
                                 result = num1 * 1000000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Kilobyte | KB":
                                 result = num1 * 1000000000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Byte | B":
                                 result = num1 * 1000000000000L;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Bit":
                                 result = num1 * 8000000000000L;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                         }
                     }
@@ -193,27 +197,27 @@ public class Data extends JFrame {
                         switch (s2) {
                             case "Terabyte | TB":
                                 result = num1 / 1000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Gigabyte | GB":
                                 result = num1;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Megabyte | MB":
                                 result = num1 * 1000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Kilobyte | KB":
                                 result = num1 * 1000000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Byte | B":
                                 result = num1 * 1000000000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break; 
                             case "Bit":
                                 result = num1 * 8000000000L;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                         }
                     }
@@ -222,27 +226,27 @@ public class Data extends JFrame {
                         switch(s2) {
                             case "Terabyte | TB":
                                 result = num1 / 1000000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Gigabyte | GB":
                                 result = num1 / 1000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Megabyte | MB":
                                 result = num1;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Kilobyte | KB":
                                 result = num1 * 1000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Byte | B":
                                 result = num1 * 1000000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break; 
                             case "Bit":
                                 result = num1 * 8000000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                         }
                     }
@@ -251,27 +255,27 @@ public class Data extends JFrame {
                         switch(s2) {
                             case "Terabyte | TB":
                                 result = num1 / 1000000000 ;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Gigabyte | GB":
                                 result = num1 / 1000000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Megabyte | MB":
                                 result = num1 / 1000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Kilobyte | KB":
                                 result = num1;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Byte | B":
                                 result = num1 * 1000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break; 
                             case "Bit":
                                 result = num1 * 8000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                         }
                     }
@@ -280,27 +284,27 @@ public class Data extends JFrame {
                         switch(s2) {
                             case "Terabyte | TB":
                                 result = num1 / 1000000000000L;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Gigabyte | GB":
                                 result = num1 / 1000000000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Megabyte | MB":
                                 result = num1 / 1000000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Kilobyte | KB":
                                 result = num1 / 1000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Byte | B":
                                 result = num1;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break; 
                             case "Bit":
                                 result = num1 * 8;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;    
                         }
                     }
@@ -309,27 +313,27 @@ public class Data extends JFrame {
                         switch(s2) {
                             case "Terabyte | TB":
                                 result = num1 / 8000000000000L;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Gigabyte | GB":
                                 result = num1 / 8000000000L;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Megabyte | MB":
                                 result = num1 / 8000000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Kilobyte | KB":
                                 result = num1 / 8000;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;
                             case "Byte | B":
                                 result = num1 / 8;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break; 
                             case "Bit":
                                 result = num1;
-                                text2.setText(result + "");
+                                text2.setText(String.format("%.4f", result));
                                 break;    
                         }
                     }

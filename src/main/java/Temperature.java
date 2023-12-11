@@ -159,6 +159,7 @@ public class Temperature extends JFrame {
                     num1 = Double.parseDouble(text1.getText());
                     String s1 = String.valueOf(list1.getSelectedItem());
                     String s2 = String.valueOf(list2.getSelectedItem());
+                    
                     if (s1.equals("Celsius | °C")) {
                         switch(s2) {
                             case "Celsius | °C":
