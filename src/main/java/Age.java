@@ -182,7 +182,14 @@ try{
     int birthDay = Integer.parseInt((String) fdays.getSelectedItem());
         int birthMonth = Integer.parseInt((String) fmonths.getSelectedItem());
         int birthYear = Integer.parseInt(year_1.getText());
+    if (birthYear<0) {
+                            JOptionPane.showMessageDialog(null,
+                                    "Negative Input!\nPlease enter positive number in  the year.  ",
+                                    "Error",
+                                    JOptionPane.ERROR_MESSAGE);
 
+    }
+    else{
         Calendar birthCalendar = new GregorianCalendar(birthYear, birthMonth-1 , birthDay);
         Calendar currentCalendar = Calendar.getInstance();
 
@@ -192,7 +199,7 @@ try{
             age--;
         }
 
-        result.setText("Your age is: " + age + " years.");}
+        result.setText("Your age is: " + age + " years.");}}
             catch(Exception ee){
                     JOptionPane.showMessageDialog(null,"Enter a number my friend","Error",JOptionPane.ERROR_MESSAGE);
                 }

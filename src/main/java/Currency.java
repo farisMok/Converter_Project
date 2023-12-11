@@ -166,8 +166,14 @@ JComboBox list1, list2;
             num1 = Double.parseDouble(text1.getText());
             String s1 = String.valueOf(list1.getSelectedItem());
             String s2 = String.valueOf(list2.getSelectedItem());
-            
-            if(e.getSource()==convert){ // same as line 124 no need ... Ifaris25 (:
+       if (num1<0) {
+                            JOptionPane.showMessageDialog(null,
+                                    "Negative Input!\nPlease enter positive number in a currency.",
+                                    "Error",
+                                    JOptionPane.ERROR_MESSAGE);
+
+    }      
+       else if(e.getSource()==convert){ // same as line 124 no need ... Ifaris25 (:
                 //converting from USD to other 
                 if (s1.equals("USD | US dollar")){
                     switch(s2){

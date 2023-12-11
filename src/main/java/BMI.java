@@ -230,18 +230,32 @@ public class BMI extends JFrame{
         public void actionPerformed (ActionEvent e){
             if (e.getSource()==calc){
                 double num1, num2,ress;
+                
                 try{
                     num1 = Double.parseDouble(text1.getText());
                     num2 = Double.parseDouble(text2.getText());
+                 if (num1<0||num2<0) {
+                            JOptionPane.showMessageDialog(null,
+                                    "Negative Input!\nPlease enter positive number.",
+                                    "Error",
+                                    JOptionPane.ERROR_MESSAGE);
+                           
+                          
+
+    }   else{
               num1 = num1 / 100 ;
               double bmi = CalculateBMI(num1,num2);
                 DecimalFormat df = new DecimalFormat("###.###");
                     sa.setText(df.format(bmi));
                    
-                }
+                }}
+                 catch (NumberFormatException ee) {
+            JOptionPane.showMessageDialog(null, "Invalid inputs","Error",JOptionPane.ERROR_MESSAGE);
+            }
                 catch(Exception ee){
                     JOptionPane.showMessageDialog(null,"Enter a number my friend","Error",JOptionPane.ERROR_MESSAGE);
                 }
+                
             }
         }
     }
