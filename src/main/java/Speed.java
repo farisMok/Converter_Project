@@ -165,6 +165,7 @@ public class Speed extends JFrame{
                 try{
                     double num1,result=0;
                     num1 = Double.parseDouble(text1.getText());
+                    if(num1<0) throw new Exception();
                     String s1 = String.valueOf(list1.getSelectedItem());
                     String s2 = String.valueOf(list2.getSelectedItem());
 

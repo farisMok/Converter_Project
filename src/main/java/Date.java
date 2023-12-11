@@ -204,7 +204,11 @@ public class Date extends JFrame{
             int secondDay = Integer.parseInt(sdays.getSelectedItem().toString());
             int secondMonth = Integer.parseInt(smonths.getSelectedItem().toString());
             int secondYear = Integer.parseInt(year_2.getText());
-
+            
+            if(firstYear <0 || secondYear <0){
+                JOptionPane.showMessageDialog(null, "Negative year!", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            else{
             if (firstYear > secondYear){
                 ye = firstYear - secondYear;
             }
@@ -227,6 +231,7 @@ public class Date extends JFrame{
             }
             result.setText(ye+" Years - "+mo+" Months - "+da+" Days");
             } 
+            }
             catch (NumberFormatException ee) {
             JOptionPane.showMessageDialog(null, "Invalid inputs","Error",JOptionPane.ERROR_MESSAGE);
             }

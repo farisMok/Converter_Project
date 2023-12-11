@@ -22,7 +22,7 @@ JComboBox list1, list2;
          this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(500,600);
         this.setLocation(500,100);
-        this.setTitle("Mass");
+        this.setTitle("Currency");
         //label panel
         JPanel p1 = new JPanel(new FlowLayout(FlowLayout.LEFT));
 

@@ -161,7 +161,10 @@ public class Length extends JFrame{
                 String s1 = String.valueOf(list1.getSelectedItem());
                 String s2 = String.valueOf(list2.getSelectedItem());
                    
-
+                if(num1 <0){
+                    JOptionPane.showMessageDialog(null,  "Negative Input! ", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+                else{
                 if (s1.equals("Kilometers | km")){
                      switch(s2){
                          case "Kilometers | km":
@@ -247,7 +250,7 @@ public class Length extends JFrame{
                      }
                  }
 
-                
+                }
                 }
                 catch(Exception e1){
                     JOptionPane.showMessageDialog(null, "Invalid Input", "Error", JOptionPane.ERROR_MESSAGE);
